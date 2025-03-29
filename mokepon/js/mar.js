@@ -1,4 +1,3 @@
-// Variables Globales
 let ataqueJugador;
 let ataqueEnemigo;
 let vidasJugador = 3;
@@ -14,13 +13,13 @@ function iniciarJuego() {
     let botonMascotaJugador = document.getElementById("boton-mascota");
     botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador);
 
-    let botonpiedra = document.getElementById("boton-fuego");
+    let botonpiedra = document.getElementById("boton-piedra");
     botonpiedra.addEventListener("click", ataquepiedra);
     
-    let botonpapel = document.getElementById("boton-agua");
+    let botonpapel = document.getElementById("boton-papel");
     botonpapel.addEventListener("click", ataquepapel);
 
-    let botontijera = document.getElementById("boton-tierra");
+    let botontijera = document.getElementById("boton-tijera");
     botontijera.addEventListener("click", ataquetijera);
 
     let botonReiniciar = document.getElementById("boton-reiniciar");
@@ -135,9 +134,10 @@ function crearMensajeFinal(resultadoFinal) {
     let sectionMensajes = document.getElementById("resultado");
     sectionMensajes.innerHTML = resultadoFinal;
 
-    document.getElementById("boton-fuego").disabled = true;
-    document.getElementById("boton-agua").disabled = true;
-    document.getElementById("boton-tierra").disabled = true;
+    // Deshabilitar los botones de ataque correctos
+    document.getElementById("boton-piedra").disabled = true;
+    document.getElementById("boton-papel").disabled = true;
+    document.getElementById("boton-tijera").disabled = true;
 
     let sectionReiniciar = document.getElementById("reiniciar");
     sectionReiniciar.style.display = "block";
@@ -145,6 +145,12 @@ function crearMensajeFinal(resultadoFinal) {
 
 function reiniciarJuego() {
     location.reload();
+}
+
+function habilitarBotones() {
+    document.getElementById("boton-piedra").disabled = false;
+    document.getElementById("boton-papel").disabled = false;
+    document.getElementById("boton-tijera").disabled = false;
 }
 
 function aleatorio(min, max) {

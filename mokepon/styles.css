@@ -68,7 +68,7 @@ body {
     gap: 20px;
 }
 
-.tarjeta-de-mokepon {
+.tarjeta-de-The-Battle-of-Three {
     box-sizing: border-box;
     width: 300px;
     height: 300px;
@@ -85,17 +85,17 @@ body {
     transition: transform 0.3s ease-in-out; /* Transición suave */
 }
 
-.tarjeta-de-mokepon:hover {
+.tarjeta-de-The-Battle-of-Three:hover {
     transform: scale(1.1); /* Aumenta la tarjeta en un 10% */
 }
 
-.tarjeta-de-mokepon img {
+.tarjeta-de-The-Battle-of-Three img {
     width: 130px;
     height: 200px;
     border-radius: 20px;
 }
 
-.tarjeta-de-mokepon p {
+.tarjeta-de-The-Battle-of-Three p {
     font-size: 25px;
 }
 
